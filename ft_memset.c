@@ -6,11 +6,12 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:27:53 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/03 15:48:34 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/04 10:48:49 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+
+#include "libft.h"
 void	*ft_memset(void *b, int c, size_t len)
 {
 	size_t			i;

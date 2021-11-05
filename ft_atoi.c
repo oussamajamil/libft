@@ -6,10 +6,11 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:05:06 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/03 15:19:18 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/04 10:45:37 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 int	ft_atoi(const char *str)
 {
 	int	i;

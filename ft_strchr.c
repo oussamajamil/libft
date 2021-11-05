@@ -6,20 +6,16 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 17:57:54 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/03 16:56:04 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/03 17:32:15 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 char    *ft_strchr(const char *s, int c)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != c)
-	{
-	    if(s[i] == 0 && c == 0)
-	        break;
-	    i++;
-	}
-	return ((char *) &s[i]);
+    while (*s != c && *s){
+        s++;
+    }
+    if(*s == c)
+      return ((char *) s);
+    return 0;
 }

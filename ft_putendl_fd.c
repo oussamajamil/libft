@@ -1,20 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 11:15:36 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/04 10:48:26 by ojamil           ###   ########.fr       */
+/*   Created: 2021/11/05 11:30:39 by ojamil            #+#    #+#             */
+/*   Updated: 2021/11/05 11:37:23 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-int	ft_isalnum(int c)
+#include "libft.h"
+void ft_putendl_fd(char *s, int fd)
 {
-	if ((c >= 48 && c <= 57) || (c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else
-		return (0);
+	int i;
+
+	i = 0;
+	if (!s)
+		return;
+	ft_putstr_fd(s, fd);
+	write(fd, "\n", 1);
 }
