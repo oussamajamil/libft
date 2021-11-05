@@ -1,52 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 15:12:57 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/05 15:13:41 by ojamil           ###   ########.fr       */
+/*   Created: 2021/11/05 15:45:29 by ojamil            #+#    #+#             */
+/*   Updated: 2021/11/05 16:17:22 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-int ditecter(char *d, char *s, size_t len)
+int ft_count(long n)
 {
-	size_t i;
-	i = 0;
-	while (i < len)
+	int i;
+
+	i = 1;
+	if (n < 0)
 	{
-		if (s == d + i)
-			return 1;
+		i++;
+		n *= -1;
+	}
+	while (n / 10 > 0)
+	{
+		n /= 10;
 		i++;
 	}
-	return 0;
+	return i;
 }
-
-void *ft_memmove(void *dst, const void *src, size_t len)
+char *ft_itoa(int n)
 {
-	char *str1;
-	char *str2;
-	size_t i;
+	int count;
+	long cp;
+	char *str;
 
-	str1 = (char *)dst;
-	str2 = (char *)src;
-	if (str2 == NULL && str1 == NULL)
+	cp = n;
+	count = ft_count(n);
+	str = malloc(sizeof(char) * count + 1);
+	if (!str)
 		return NULL;
-	i = 0;
-	if (ditecter(str1, str2, len) == 0)
+	if (cp < 0)
 	{
-		ft_memcpy(dst, src, len);
+		str[0] = '-';
+		cp *= -1;
 	}
-	else
+	str[count] = 0;
+	while (count - 1 >= 0 && str[count - 1] != '-')
 	{
-		while (i < len)
-		{
-			str1[i] = str2[i];
-			i++;
-		}
+		str[count-- - 1] = '0' + (cp % 10);
+		cp /= 10;
 	}
-	return (str1);
+	return (str);
 }

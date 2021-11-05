@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 17:34:17 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/05 11:49:03 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/05 16:16:12 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ size_t ft_strlen(const char *s);
 int ft_tolower(int c);
 int ft_toupper(int c);
 int ft_atoi(const char *str);
+char *ft_itoa(int n);
 char *ft_strdup(const char *s1);
 void *ft_calloc(size_t count, size_t size);
 char *ft_strchr(const char *s, int c);
