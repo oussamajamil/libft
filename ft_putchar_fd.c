@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ojamil <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/05 10:55:05 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/05 11:06:05 by ojamil           ###   ########.fr       */
+/*   Created: 2021/11/06 15:24:51 by ojamil            #+#    #+#             */
+/*   Updated: 2021/11/06 15:24:54 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "libft.h"
-void ft_putchar_fd(char c, int fd)
+
+void	ft_putchar_fd(char c, int fd)
 {
 	write(fd, &c, 1);
 }

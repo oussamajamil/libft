@@ -6,15 +6,15 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 16:34:47 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/05 16:46:30 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/06 15:40:18 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_count_word(const char *s,char c)
+int	ft_count_word(const char *s, char c)
 {
-	
 }
-char **ft_split(char const *s, char c)
+
+char	**ft_split(char const *s, char c)
 {
 	s = ft_start((char *)s, " ");
 	printf("%s", s);

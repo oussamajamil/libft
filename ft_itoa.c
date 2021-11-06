@@ -6,14 +6,15 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 15:45:29 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/05 16:17:22 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/06 15:05:35 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-int ft_count(long n)
+
+int	ft_count(long n)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	if (n < 0)
@@ -26,19 +27,20 @@ int ft_count(long n)
 		n /= 10;
 		i++;
 	}
-	return i;
+	return (i);
 }
-char *ft_itoa(int n)
+
+char	*ft_itoa(int n)
 {
-	int count;
-	long cp;
-	char *str;
+	int		count;
+	long	cp;
+	char	*str;
 
 	cp = n;
 	count = ft_count(n);
 	str = malloc(sizeof(char) * count + 1);
 	if (!str)
-		return NULL;
+		return (NULL);
 	if (cp < 0)
 	{
 		str[0] = '-';

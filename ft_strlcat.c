@@ -6,11 +6,12 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 16:47:47 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/04 10:49:37 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/06 15:14:38 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;

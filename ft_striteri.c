@@ -6,19 +6,20 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 09:47:55 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/05 10:49:11 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/06 15:10:42 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void ft_striteri(char *s, void (*f)(unsigned int, char *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-    unsigned int i;
-    i = 0;
-    if (*s == 0)
-        return;
-    while (s[i])
-    {
-        (*f)(i, s[i]);
-        i++;
-    }
+	unsigned int	i;
+
+	i = 0;
+	if (*s == 0)
+		return ;
+	while (s[i])
+	{
+		(*f)(i, s[i]);
+		i++;
+	}
 }

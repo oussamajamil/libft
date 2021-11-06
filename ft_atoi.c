@@ -6,21 +6,21 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:05:06 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/04 10:45:37 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/06 13:37:22 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 int	ft_atoi(const char *str)
 {
-	int	i;
-	int	cp;
+	int		i;
+	int		cp;
 	long	r;
 
 	i = 0;
 	cp = 1;
 	r = 0;
-	
 	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
 		i++;
 	if (str[i] == '-' || str[i] == '+')

@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:47:29 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/04 10:50:13 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/06 15:14:21 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
-	
+
 	i = 0;
 	if (dstsize > 0)
 	{
