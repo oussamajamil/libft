@@ -6,32 +6,33 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 16:47:47 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/06 15:14:38 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/07 15:26:40 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t  ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
+    size_t  len_src;
+	size_t	len_dst;
+	size_t	results;
 	size_t	i;
-	size_t	a;
-	size_t	b;
-	char	*str1;
 
-	str1 = (char *)src;
-	a = ft_strlen(str1);
-	b = ft_strlen(dst);
+	len_src = ft_strlen(src);
+	len_dst = ft_strlen (dst);
+	results = 0;
 	i = 0;
-	if (dstsize == 0)
-		return (a);
-	else if (b > dstsize)
-		return (a + dstsize);
-	while (i < dstsize - b - 1 && str1[i])
+	if (dstsize > len_dst)
+		results  = len_dst + len_src;
+	else
+		results = len_src + dstsize;
+	while (src[i] && len_dst + 1 <dstsize)
 	{
-		dst[i + b] = src[i];
+		dst[len_dst] = src[i];
+		len_dst++;
 		i++;
 	}
-	dst[i + b] = 0;
-	return (a + b);
+	dst[len_dst] = 0;
+	return (results);
 }

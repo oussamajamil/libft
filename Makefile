@@ -6,7 +6,7 @@
 #    By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/02 09:34:39 by ojamil            #+#    #+#              #
-#    Updated: 2021/11/05 16:16:00 by ojamil           ###   ########.fr        #
+#    Updated: 2021/11/07 11:36:32 by ojamil           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,6 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 
 SRC =	ft_strnstr.c\
-		ft_strncmp.c\
 		ft_tolower.c\
 		ft_toupper.c    \
 		ft_atoi.c \
@@ -66,6 +65,7 @@ SRC =	ft_strnstr.c\
 		ft_putendl_fd.c\
 		ft_putnbr_fd.c\
 		ft_itoa.c \
+		ft_split.c\
 		#calloc problem\
 		# ft_memcpy.c     \
 		# ft_memmove.c    \

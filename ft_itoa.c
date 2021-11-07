@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 15:45:29 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/06 15:05:35 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/07 18:02:59 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,10 @@ char	*ft_itoa(int n)
 	str = malloc(sizeof(char) * count + 1);
 	if (!str)
 		return (NULL);
+	if(n == 0){
+		str[0] = '0';
+		str[1] = 0;
+    }
 	if (cp < 0)
 	{
 		str[0] = '-';

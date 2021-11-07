@@ -1,42 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/03 11:33:01 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/07 17:52:38 by ojamil           ###   ########.fr       */
+/*   Created: 2021/11/01 16:47:47 by ojamil            #+#    #+#             */
+/*   Updated: 2021/11/07 15:24:38 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+size_t  ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	char	*str;
+    size_t  len_src;
+	size_t	len_dst;
+	size_t	results;
 	size_t	i;
 
-	if (!s)
-		return (NULL);
-	if (start >= ft_strlen(s))
-	{
-		str = malloc (sizeof(char) * 1);
-		str[0] = 0;
-		return (str);
-	}
-	i = len;
-	if(len >= ft_strlen(s) - start)
-		i = ft_strlen(s) - start;
-	str = malloc (sizeof(char) * i + 1);
-	if (!str)
-		return (NULL);
+	len_src = ft_strlen(src);
+	len_dst = ft_strlen (dst);
+	result = 0;
 	i = 0;
-	while (s[start + i] && i < len)
+	if (dstsize > len_dst)
+		result  = dst_len + dst_src;
+	else
+		result = len_src + dstsize;
+	while (src[i] && len_dst + 1 <dstsize)
 	{
-		str[i] = s[start + i];
+		dst[len_dst] = src[i];
+		len_dst++;
 		i++;
 	}
-	str[i] = '\0';
-	return (str);
+	dst[len_dst] = 0;
 }
