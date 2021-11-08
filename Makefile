@@ -6,7 +6,7 @@
 #    By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/02 09:34:39 by ojamil            #+#    #+#              #
-#    Updated: 2021/11/07 11:36:32 by ojamil           ###   ########.fr        #
+#    Updated: 2021/11/08 10:54:45 by ojamil           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,6 +66,9 @@ SRC =	ft_strnstr.c\
 		ft_putnbr_fd.c\
 		ft_itoa.c \
 		ft_split.c\
+		ft_strncmp.c\
+		ft_lstnew.c\
+		ft_lstsize.c\
 		#calloc problem\
 		# ft_memcpy.c     \
 		# ft_memmove.c    \

@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 11:32:39 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/07 11:50:24 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/08 09:46:02 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,8 +70,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 
 	if (!s1 || !set)
 		return (NULL);
-	if (*set == 0)
-		return ((char *)s1);
 	str = ft_start(s1, set);
 	p = (char *) malloc (ft_end (str, set) + 1);
 	if (!p)
