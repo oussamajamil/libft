@@ -6,7 +6,7 @@
 #    By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/02 09:34:39 by ojamil            #+#    #+#              #
-#    Updated: 2021/11/10 09:27:35 by ojamil           ###   ########.fr        #
+#    Updated: 2021/11/10 14:53:48 by ojamil           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,6 +77,7 @@ SRC =	ft_tolower.c\
 		ft_lstclear.c\
 		ft_lstiter.c \
 		ft_lstmap.c\
+		$(BNS)
 
 BNS =	ft_lstnew.c\
 		ft_lstsize.c\

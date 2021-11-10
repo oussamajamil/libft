@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 16:34:47 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/07 17:22:01 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/10 15:25:28 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ int	ft_count_and_alloc(char *s, char c)
 		return (0);
 	return (cp);
 }
-
 int	ft_split_2(char const *s, char c, char **str, int i)
 {
 	int	j;
@@ -71,7 +70,7 @@ int	ft_split_2(char const *s, char c, char **str, int i)
 			k = 0;
 			str[j] = (char *)malloc(ft_count_and_alloc((char *)&s[i], c) + 1);
 			if (!str[j])
-				return (0);
+				return (j);
 			while (k < ft_count_and_alloc((char *)&s[i], c))
 			{
 				str[j][k] = s[i + k];
@@ -82,7 +81,7 @@ int	ft_split_2(char const *s, char c, char **str, int i)
 		}
 	}
 	str[j] = 0;
-	return (1);
+	return (-1);
 }
 
 char	**ft_split(char const *s, char c)
@@ -96,7 +95,14 @@ char	**ft_split(char const *s, char c)
 	if (!str)
 		return (NULL);
 	j = ft_split_2(s, c, str, 0);
-	if (j == 0)
-		return (NULL);
+	if (j != -1 )
+	{
+		while (j >= 0)
+		{
+			free(&str[j]);
+			j--;
+		}
+		free(str);
+	}
 	return (str);
 }
