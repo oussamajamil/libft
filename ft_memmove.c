@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:12:57 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/10 09:57:42 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/10 18:38:34 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char	*str1;
 	char	*str2;
-	size_t	i;
 
 	str1 = (char *) dst;
 	str2 = (char *) src;
 	if (str2 == NULL && str1 == NULL)
 		return (NULL);
-	i = 0;
 	if (str1 < str2)
 	{
 		return (ft_memcpy(dst, src, len));

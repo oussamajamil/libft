@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 16:34:47 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/10 15:25:28 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/10 18:33:31 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,7 @@ char	**ft_split(char const *s, char c)
 	{
 		while (j >= 0)
 		{
-			free(&str[j]);
+			free(str[j]);
 			j--;
 		}
 		free(str);

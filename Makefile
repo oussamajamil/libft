@@ -6,7 +6,7 @@
 #    By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/02 09:34:39 by ojamil            #+#    #+#              #
-#    Updated: 2021/11/10 14:53:48 by ojamil           ###   ########.fr        #
+#    Updated: 2021/11/10 18:37:27 by ojamil           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -96,7 +96,7 @@ INCLUDES = libft.h
 all: $(NAME)
 
 $(NAME): $(OBJECTS1) $(INCLUDES)
-	ar rcs $(NAME) $(OBJECTS1)
+	ar rcs $(NAME) $^
 
 %.o : %.c
 	$(CC) $(CFLAGS) -o $@ -c $^
