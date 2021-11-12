@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 16:34:47 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/10 18:33:31 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/11 17:42:05 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,7 @@ int	ft_count_and_alloc(char *s, char c)
 		return (0);
 	return (cp);
 }
+
 int	ft_split_2(char const *s, char c, char **str, int i)
 {
 	int	j;
@@ -95,7 +96,7 @@ char	**ft_split(char const *s, char c)
 	if (!str)
 		return (NULL);
 	j = ft_split_2(s, c, str, 0);
-	if (j != -1 )
+	if (j != -1)
 	{
 		while (j >= 0)
 		{

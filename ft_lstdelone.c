@@ -6,16 +6,16 @@
 /*   By: ojamil <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 10:37:11 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/09 15:40:04 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/11 16:33:15 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (!lst)
+	if (!lst || !(*del))
 		return ;
 	(*del)(lst->content);
-	free(lst);
+	free (lst);
 }

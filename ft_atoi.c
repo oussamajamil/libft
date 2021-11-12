@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/02 15:05:06 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/06 13:37:22 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/11 11:03:01 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 int	ft_atoi(const char *str)
 {
-	int		i;
-	int		cp;
-	long	r;
+	int	i;
+	int	cp;
+	int	r;
 
 	i = 0;
 	cp = 1;

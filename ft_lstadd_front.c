@@ -6,13 +6,16 @@
 /*   By: ojamil <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/08 10:50:53 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/09 14:43:56 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/11 17:27:21 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_list **lst, t_list *new)
 {
+	if (!new -> content)
+		return ;
+	new -> next = *lst;
 	*lst = new;
 }

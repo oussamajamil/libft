@@ -6,13 +6,13 @@
 /*   By: ojamil <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/09 09:09:08 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/09 14:49:44 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/11 17:14:32 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstlast(t_list *lst)
+t_list	*ft_lstlast(t_list *lst)
 {
 	if (!lst)
 		return (NULL);

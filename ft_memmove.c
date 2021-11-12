@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:12:57 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/10 18:38:34 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/11 10:14:23 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	}
 	else
 	{
-		while (len >  0)
+		while (len > 0)
 		{
 			str1[len - 1] = str2[len - 1];
 			len--;

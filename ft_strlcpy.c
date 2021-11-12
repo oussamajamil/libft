@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 15:47:29 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/06 15:14:21 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/11 16:56:52 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,5 +26,5 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 		}
 		dst[i] = '\0';
 	}
-	return (ft_strlen((char *) src));
+	return (ft_strlen(src));
 }

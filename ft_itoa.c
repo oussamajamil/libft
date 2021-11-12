@@ -6,15 +6,15 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 15:45:29 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/08 18:27:57 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/11 10:13:14 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_count(long n)
+int	ft_count(long n)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	if (n < 0)
@@ -30,18 +30,9 @@ int ft_count(long n)
 	return (i);
 }
 
-char *ft_itoa(int n)
+void	ft_remplir(char *str, long cp, int count)
 {
-	int count;
-	long cp;
-	char *str;
-
-	cp = n;
-	count = ft_count(n);
-	str = malloc(sizeof(char) * count + 1);
-	if (!str)
-		return (NULL);
-	if (n == 0)
+	if (cp == 0)
 	{
 		str[0] = '0';
 		str[1] = 0;
@@ -57,5 +48,19 @@ char *ft_itoa(int n)
 		str[count-- - 1] = '0' + (cp % 10);
 		cp /= 10;
 	}
+}
+
+char	*ft_itoa(int n)
+{
+	int		count;
+	long	cp;
+	char	*str;
+
+	cp = n;
+	count = ft_count(n);
+	str = malloc(sizeof(char) * count + 1);
+	if (!str)
+		return (NULL);
+	ft_remplir (str, cp, count);
 	return (str);
 }

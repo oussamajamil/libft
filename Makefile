@@ -1,30 +1,3 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/11/02 09:34:39 by ojamil            #+#    #+#              #
-#    Updated: 2021/11/10 18:37:27 by ojamil           ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-# SRCS = $(wildcard *.c)
-# FLAG = gcc -Wall -Wextra -Werror
-# NAME = libft.a
-# OBJS = $(SRCS:.c=.o)
-
-# $(NAME) :
-# $(FLAG) -c $(SRCS)
-# ar cr $(NAME) $(OBJS)
-# all : $(NAME)
-# clean :
-# rm $(OBJS)
-# fclean : clean 
-# rm -rf $(NAME)
-# re : fclean all 
-
 NAME = libft.a
 
 CC = gcc
@@ -67,17 +40,7 @@ SRC =	ft_tolower.c\
 		ft_split.c\
 		ft_strncmp.c\
 		ft_strnstr.c\
-		ft_lstnew.c\
-		ft_lstsize.c\
-		ft_lstadd_front.c\
-	   	ft_lstlast.c\
-		ft_lstadd_back.c\
-		ft_striteri.c\
-		ft_lstdelone.c\
-		ft_lstclear.c\
-		ft_lstiter.c \
-		ft_lstmap.c\
-		$(BNS)
+		ft_striteri.c
 
 BNS =	ft_lstnew.c\
 		ft_lstsize.c\
@@ -87,9 +50,10 @@ BNS =	ft_lstnew.c\
 		ft_lstdelone.c\
 		ft_lstclear.c\
 		ft_lstiter.c\
+		ft_lstmap.c
 
 OBJECTS1 = $(SRC:.c=.o)
-OBJECTS2 = $(BNS:.c =.o)
+OBJECTS2 = $(BNS:.c=.o)
 
 INCLUDES = libft.h 
 
@@ -102,7 +66,7 @@ $(NAME): $(OBJECTS1) $(INCLUDES)
 	$(CC) $(CFLAGS) -o $@ -c $^
 
 clean:
-	rm -rf $(OBJECTS1)
+	rm -rf $(OBJECTS1) $(OBJECTS2) 
 
 fclean: clean
 	rm -rf $(NAME)
@@ -110,5 +74,5 @@ fclean: clean
 re: fclean all
 
 
-bonus: $(OBJECTS2) $(INCLUDES)
-	ar rcs $(NAME) $(OBJECTS)
+bonus: $(OBJECTS2) $(INCLUDES) $(OBJECTS1)
+	ar rcs $(NAME) $^

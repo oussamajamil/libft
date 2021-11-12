@@ -6,7 +6,7 @@
 /*   By: ojamil <ojamil@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/04 09:54:04 by ojamil            #+#    #+#             */
-/*   Updated: 2021/11/07 09:08:57 by ojamil           ###   ########.fr       */
+/*   Updated: 2021/11/11 17:31:05 by ojamil           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	l = ft_strlen(s1) + ft_strlen(s2);
-	str = malloc(sizeof(char) * l + 1);
+	str = malloc(sizeof(char) * (l + 1));
 	if (!str)
 		return (NULL);
 	while (s1[i])
